@@ -220,6 +220,8 @@ else {
 }
     }
     
+    
+    
 #signup.php
 
  <?php
@@ -328,6 +330,10 @@ else{
         
         ?>
         
+        
+        
+        
+        
 #javascript.js 
 
 //Ajax Call for the sign up form 
@@ -385,6 +391,22 @@ $("#loginform").submit(function(event){
     });
 
 });
+
+//clear data in modal
+$("#signupModal").on('hidden.bs.modal',function(){
+    $('#signupform')[0].reset();
+    $('#signupmessage').empty();
+});
+
+$("#loginModal").on('hidden.bs.modal',function(){
+    $('#loginform')[0].reset();
+    $('#loginmessage').empty();
+});
+
+
+
+
+
 
 
 #styling.css
